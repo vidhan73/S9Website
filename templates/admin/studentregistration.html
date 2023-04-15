@@ -1,0 +1,93 @@
+{% extends 'admin/dashboard.html' %}
+{% load static %}
+{% block x %}
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+         
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Student Registration</h3>
+  
+              <form class="px-md-2" method="POST">
+                {% csrf_token %}
+  
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1q">Name</label>
+                  <input type="text" name="Name" id="form3Example1q" class="form-control" />
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline datepicker">
+                        <label for="exampleDatepicker1" class="form-label">Select a date</label>
+                      <input type="date"  name="Date" class="form-control" id="exampleDatepicker1" />
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+                          <label for="exampleDatepicker1" class="form-label">Select Gender</label>
+                    <select class="select" name="Gender">
+                      <option value="1" disabled>Gender</option>
+                      <option value="2">Female</option>
+                      <option value="3">Male</option>
+                      <option value="4">Other</option>
+                    </select>
+  
+                  </div>
+                </div>
+  
+                <div class="mb-4">
+  <label for="exampleDatepicker1" class="form-label">Select Class</label>
+                  <select class="select" name="Class">
+                    <option value="1" disabled>Class</option>
+                    {% for x in class %}
+                    <option value="">{{x.Class}}</option>
+                    {% endfor %}
+                  </select>
+  
+                </div>
+                <div class="mb-4">
+  <label for="exampleDatepicker1" class="form-label">Select Board</label>
+                    <select class="select" name="Batch">
+                      <option value="1" disabled>Class</option>
+                      {% for x in class %}
+                      <option value="2">{{x.Board}}</option>
+                      {% endfor %}
+                    </select>
+                    
+                  </div>
+  
+                <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                  <div class="col-md-6">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1w">Father's Name:</label>
+                        <input type="text" id="form3Example1w" class="form-control" name="Coupon" />
+                    </div>
+  
+                  </div>
+                </div>
+                  <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                  <div class="col-md-6">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1w">Mobile Number:</label>
+                        <input type="text" id="form3Example1w" class="form-control" name="Coupon" />
+                    </div>
+  
+                  </div>
+                </div>
+                <input type="submit" class="btn btn-success btn-lg mb-1" value="submit"></input>
+  
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

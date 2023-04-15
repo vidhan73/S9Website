@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super90Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="{% static 'css/all.css' %}" rel="stylesheet">
+    <script src="{% static 'js/index.js' %}"></script>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+<style>
+    a {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row top bg-mycolor text-light ">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 pt-1 ">
+          <i class="fa-solid fa-envelope"></i>
+            Super90Classes@gmail.com
+        </div>
+<div class="col-sm-1"></div>
+         <div class="col-sm-3 pt-1">
+            <i class="fa-solid fa-phone"></i>
+            +91&nbsp987654321
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 fs-5">
+            <a href="#" style="color:white;"> <i class="fa-brands fa-facebook ms-3 s-icon"></i></a>
+           <a href="#" style="color:white;"> <i class="fa-brands fa-instagram ms-3 s-icon"></i></a>
+               <a href="#" style="color:white;"> <i class="fa-brands fa-youtube ms-3 s-icon"></i></a>
+               <a href="#" style="color:white;"> <i class="fa-brands fa-twitter ms-3 s-icon"></i></a>
+        </div>
+
+    </div>
+    <div class="row header sticky-top">
+        <nav class="navbar navbar-expand-lg ps-5">
+            <a href="#" class="navbar-brand fs-3 px-5"><img src="{% static 'images/logo.jpg' %}" alt="..." height="80px"/>
+            &nbspSuper90<b class="text1-mycolor">Classes</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index/"><i class="fa-solid fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus/"><i class="fa-solid fa-user"></i>AboutUs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactus/" type="button"><i class="fa-solid fa-address-book"></i>Enquiry</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/user/news/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" ><i class="fa-regular fa-images"></i>Gallery</a>
+                        <div class="dropdown-menu">
+                            <a href="/image/" class="dropdown-item">Image</a>
+                            <a href="/video/" class="dropdown-item">Video</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="input-group ms-5 pt-1">
+                            <div class="form-outline">
+                                <input id="search-input" type="search" id="form1" class="form-control"
+                                       placeholder="Search"/>
+                            </div>
+                            <button id="search-button" type="button" class="btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <div class="row" style="background-color:#4f0e0e;">
+      <div class="col-sm-2 ps-5 text-white"><i>NOTICE & UPDATES</i></div>
+      <div class="col-sm-10 text-white">  {% if n %}
+        {% for a in n %}
+    <marquee>  {{a.notice}} &nbsp || {{a.vdate}}</marquee>
+        {% endfor %}
+        {% endif %}</div>
+    </div>
+    <div class="row content">
+        <div class="col-sm-12 py-2">
+            {% block x %}
+
+            {% endblock %}
+        </div>
+
+    </div>
+        <footer id="aa-footer">
+            <!-- footer bottom -->
+            <div class="aa-footer-top text-white bg-mycolor">
+             <div class="container pt-5">
+                <div class="row">
+                <div class="col-md-12">
+                  <div class="aa-footer-top-area">
+                    <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                        <div class="aa-footer-widget">
+                          <h3>Main Menu</h3>
+                          <ul class="aa-footer-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">AboutUs</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            
+                            <li><a href="#">Contact Us</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="aa-footer-widget">
+                          <div class="aa-footer-widget">
+                            <h3>Knowledge Base</h3>
+                            <ul class="aa-footer-nav">
+                              <li><a href="#">Notification</a></li>
+                              <li><a href="#">Updates</a></li>
+                              <li><a href="#">Services</a></li>
+                              <li><a href="#">Discount</a></li>
+                              <li><a href="#">Special Offer</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="aa-footer-widget">
+                          <div class="aa-footer-widget">
+                            <h3>Useful Links</h3>
+                            <ul class="aa-footer-nav">
+                              <li style="text-decoration:none;"><a  href="#">Site Map</a></li>
+                              <li><a href="#">Search</a></li>
+                              <li><a href="#">Advanced Search</a></li>
+                              <li><a href="#">Suppliers</a></li>
+                              <li><a href="#">FAQ</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="aa-footer-widget">
+                          <div class="aa-footer-widget">
+                            <h3>Contact Us</h3>
+                            <address>
+                              <p> Nirala Nagar Raebareli</p>
+                              <p><span class="fa fa-phone"></span>+91 7843783488</p>
+                              <p><span class="fa fa-envelope"></span>Super90Classes@gmail.com</p>
+                            </address>
+                            <div class="aa-footer-social">
+                              <a href="#"><span class="fa-brands fa-facebook fs-2"></span></a>
+                              <a href="#"><span class="fa-brands fa-instagram fs-2"></span></a>
+                              <a href="#"><span class="fa-brands fa-twitter fs-2"></span></a>
+                              <a href="#"><span class="fa-brands fa-youtube fs-2"></span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+            </div>
+            <!-- footer-bottom -->
+            <div class="aa-footer-bottom text-white bg-mycolor ">
+              <div class="container">
+                <div class="row">
+                <div class="col-md-12">
+                  <div class="aa-footer-bottom-area">
+                    <center><h2>Developer vidhan shukla</h2>
+                    <h2>Partner with Technochangers Community</h2>
+            </center>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

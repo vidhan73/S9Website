@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block x %}
+<style>
+  .pic
+  {
+  height:200px;
+  }
+  .pic:hover
+  {
+  box-shadow:0px 0px 8px #4f0e0e;
+  }
+</style>
+
+<div class="col s1 p-0">
+    <!--start slider-->
+<div id="carouselExample" class="carousel carousel slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="{% static 'images/banner.jpg' %}" class="d-block w-100 slide-h" alt="..." height="450px">
+<div class="carousel-caption d-none d-md-block" style="border-style: dotted;color:#4f0e0e;background-color:rgba(217,218,223,0.2);">
+<h5 class="text-darkcolor fs-1" style="color:#4f0e0e;">Welcome to the Super90Classes</h5>
+<p class="fw-bold fs-2">A Place Where Dreams Comes True</p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="{% static 'images/1 (1).png' %}" class="d-block w-100 slide-h" alt="..." height="450px">
+<div class="carousel-caption d-none d-md-block" style="border-style: dotted;color:#4f0e0e;background-color:rgba(217,218,223,0.2);">
+<a href="/user/slidenews?n={{a.id}}" style="text-decoration:none;color:#4f0e0e"><h5 class=" fs-2"><b>OUR ACHIEVERS</b></h5></a>
+<p class="fw-bold color-dark"></p>
+</div>
+</div>
+<div class="carousel-item">
+    <img src="{% static 'images/1 (2).PNG' %}" class="d-block w-100 slide-h" alt="..." height="450px">
+    <div class="carousel-caption d-none d-md-block" style="border-style: dotted;color:#4f0e0e;background-color:rgba(217,218,223,0.2);">
+    <a href="/user/slidenews?n={{a.id}}" style="text-decoration:none;color:#4f0e0e"><h5 class=" fs-2"><b>ADMISSION OPEN</b></h5></a>
+    <p class="fw-bold color-dark">2022-23</p>
+    </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="True"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="True"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+  <div class="row">
+    <div class="col-sm-12">
+    <h1 class="pt-4 text-center">About<b style="color:red;"> Us</b></h1>  
+      <hr>
+      </div>
+      <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <img class="" src="{% static 'images/logo.jpg' %}" alt="..."/>
+        </div>
+        <div class="col-sm-4" >
+        <p class="text-justify fs-5"> <b>Super 90 Classes </b> is a Academic Institute in Raebareli. It's a place where Dreams Comes True. A coaching Institute for the prepartion of JEE,NEET,Foundation Classes,Olympiads Classes and Academic Classes(9th to 12th). We focus on building a strong foundation of knowledge and concepts in students for their success and provide an excellent plateform for the prepartion of competitive exams and board level educations.
+</p>
+        </div>
+        </div>
+</div>
+<div class="Facility">
+  <h1 class="pt-4 text-center">Institute<b style="color:red;">Facility</b></h1>  
+    <hr>
+<div class="col-sm-12">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row pt-4">
+            <div class="col-sm-4 pt-3">
+                <!--start card-->
+                <div class="card w-100 h-100 ">
+                   <img src="{% static 'images/Assignment.jpg' %}" class="card-img-top  pic" alt="...">
+                     <div class="card-body">
+                        <h5 class="card-title text-center">Chapter Assignment</h5>
+                        
+                     </div>
+                 </div>
+                <!--end card-->
+            </div>
+            <div class="col-sm-4 pt-3">
+                <!--start card-->
+                <div class="card w-100 h-100 ">
+                   <img src="{% static 'images/Classes.jpg' %}" class="card-img-top  pic" alt="...">
+                     <div class="card-body">
+                        <h5 class="card-title text-center">Task Wise Study</h5>
+                     </div>
+                 </div>
+                <!--end card-->
+            </div>
+            
+            <div class="col-sm-4 pt-3">
+              <!--start card-->
+              <div class="card w-100 h-100 ">
+                 <img src="{% static 'images/study.jpg' %}" class="card-img-top  pic" alt="...">
+                   <div class="card-body">
+                      <h5 class="card-title text-center">Special Attention For Weak Student</h5>
+                   </div>
+               </div>
+              <!--end card-->
+          </div>
+          <div class="col-sm-4 pt-3">
+            <!--start card-->
+            <div class="card w-100 h-100 ">
+               <img src="{% static 'images/growth.jpg' %}" class="card-img-top  pic" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title text-center">Weakly Test and Check Progress of student</h5>
+                 </div>
+             </div>
+            <!--end card-->
+        </div>
+        <div class="col-sm-4 pt-3">
+          <!--start card-->
+          <div class="card w-100 h-100 ">
+             <img src="{% static 'images/bio.jpg' %}" class="card-img-top  pic" alt="...">
+               <div class="card-body">
+                  <h5 class="card-title text-center">BioMeteric Attendance</h5>
+               </div>
+           </div>
+          <!--end card-->
+      </div>
+      <div class="col-sm-4 pt-3">
+        <!--start card-->
+        <div class="card w-100 h-100 ">
+           <img src="{% static 'images/tech.jpg' %}" class="card-img-top  pic" alt="...">
+             <div class="card-body">
+                <h5 class="card-title text-center">All Updated System Used for Teaching</h5>
+             </div>
+         </div>
+        <!--end card-->
+    </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+</div>
+</div>
+<div class="Course">
+  <h1 class="pt-4 text-center">Courses<b style="color:red;">Available</b></h1>  
+    <hr>
+  
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+      <div class="row pt-4">
+          <div class="col-sm-4 pt-3">
+              <!--start card-->
+              <div class="card w-100">
+                <h1 class="text-center pt-4">Ranker's & Foundation Batches</h1>
+                   <div class="card-body">
+                      <h5 class="card-title text-center">{{x.gname}}</h5>
+                   </div>
+               </div>
+              <!--end card-->
+          </div>
+          <div class="col-sm-4 pt-3">
+              <!--start card-->
+              <div class="card w-100">
+                 <h1 class="text-center pt-4">1<sup>th</sup> to 8<sup>th</sup> Foundation Batches</h1>
+                   <div class="card-body">
+                   </div>
+               </div>
+              <!--end card-->
+          </div>
+          
+          <div class="col-sm-4 pt-3">
+            <!--start card-->
+            <div class="card w-100">
+               <h1 class="text-center pt-4">9<sup>th</sup> to 12<sup>th</sup> Classes For Alll Boards</h1>
+                 <div class="card-body">
+                 </div>
+             </div>
+            <!--end card-->
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+</div>
+<div class="onlineClasses">
+  <h1 class="pt-4 text-center">Online<b style="color:red;">Classes</b></h1>  
+    <hr>
+    <div class="row">
+    <div class="col-sm-1"></div>
+<div class="col-sm-5">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/a2DjjII1vYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="col-sm-5">
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+<div class="row">
+  <h1 class="pt-4 text-center">OUR<b style="color:red;">ACHIEVERS</b></h1>  
+  <hr>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 py-4">
+    <div id="carouselExample" class="carousel carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+      <img src="{% static 'images/achievers1.jpg' %}" class="d-block w-100 slide-h" alt="..." height="300px">
+      <div class="carousel-caption d-none d-md-block" style="border-style: dotted;color:#4f0e0e;background-color:rgba(217,218,223,0.2);">
+      <h5 class="text-darkcolor fs-1" style="color:#4f0e0e;">VIDHAN SHUKLA</h5>
+      <p class="fw-bold fs-2">100%</p>
+      </div>
+      </div>
+      {% if img %}
+      {% for a in img %}
+      <div class="carousel-item">
+      <img src="/{{a.Image}}" class="d-block w-100 slide-h" alt="..." height="350px">
+      <div class="carousel-caption d-none d-md-block" style="border-style: dotted;color:#4f0e0e;background-color:rgba(217,218,223,0.2);">
+      <a href="#" style="text-decoration:none;color:#4f0e0e"><h5 class=" fs-2"><b>OUR ACHIEVERS</b></h5></a>
+      <p class="fw-bold color-dark">{{a.Name}}</p>
+      </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="True"></span>
+      <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="True"></span>
+      <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+      <div class="col-sm-4"></div>
+</div>
+</div>
+
+{% endblock %}

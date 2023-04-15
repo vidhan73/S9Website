@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block x %}
+<div class="col s1 p-0">
+    <!--start slider-->
+<div id="carouselExample" class="carousel carousel slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="{% static 'images/slide1.jpg' %}" class="d-block w-100 slide-h" alt="..." height="450px">
+<div class="carousel-caption d-none d-md-block" style="border-style: dotted;color:#07535c;background-color:rgba(217,218,223,0.2);">
+<h5 class="text-darkcolor fs-1" style="color:#07535c;">Welcome to the Super90Classes</h5>
+<p class="fw-bold fs-2">smlalmxklasxkxsakxmaxkmk</p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="{% static 'images/slide2.jpg' %}" class="d-block w-100 slide-h" alt="..." height="450px">
+<div class="carousel-caption d-none d-md-block" style="border-style: dotted;background-color:rgba(217,218,223,0.2);">
+<a href="/user/slidenews?n={{a.id}}" style="text-decoration:none;color:#07535c"><h5 class=" fs-2"><b>{{a.shead}}</b></h5></a>
+<p class="fw-bold color-dark">{{a.ssubject}}</p>
+</div>
+</div>
+<div class="carousel-item">
+    <img src="{% static 'images/slide3.jpg' %}" class="d-block w-100 slide-h" alt="..." height="450px">
+    <div class="carousel-caption d-none d-md-block" style="border-style: dotted;background-color:rgba(217,218,223,0.2);">
+    <a href="/user/slidenews?n={{a.id}}" style="text-decoration:none;color:#07535c"><h5 class=" fs-2"><b>{{a.shead}}</b></h5></a>
+    <p class="fw-bold color-dark">{{a.ssubject}}</p>
+    </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="True"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="True"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+  <div class="row">
+    
+</div>
+{% endblock %}

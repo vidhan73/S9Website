@@ -1,0 +1,74 @@
+{% extends 'admin/dashboard.html' %}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center">STUDENT<b style="color:#4f0e0e;">&nbspATTENDANCE</b></div>  
+<hr>
+<form action="#" method="post">
+    {% csrf_token %}
+<div class="row px-4">
+<div class="col-sm-3 ps-5"><h2>CLASS</h2>
+    <select class="select" name="Class">
+        <option value="1" disabled>Select Class</option>
+        {% for x in class %}
+        <option value="">{{x.Class}}</option>
+        {% endfor %}
+      </select>
+  </div>
+  <div class="col-sm-3 ps-5"><h2>BATCH</h2>
+    <select class="select" name="Batch">
+        <option value="1" disabled>Select Batch</option>
+        <option value="2">Morning</option>
+        <option value="3">AfterNoon</option>
+        <option value="4">Evening</option>
+      </select>
+  </div>
+  <div class="col-sm-3 ps-5"><h2>DATE</h2>
+   <input type="Date"/>
+  </div>
+  <div class="col-sm-3 ps-5"><h2>BOARD</h2>
+    <select class="select" name="Board">
+        <option value="1" disabled>Select Board</option>
+        <option value="2">UP Board</option>
+        <option value="3">CBSE Board</option>
+        <option value="4">ICSE Board</option>
+        <option value="5">ICSC Board</option>
+      </select>
+  </div>
+  <input type="submit" class="btn btn-outline-primary my-5"></input>
+</div>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">CLASS</th>
+      <th scope="col">BATCH</th>
+      <th scope="col">ATTENDANCE</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for x in student %}
+    <tr>
+      <th scope="row">{{x.Name}}</th>
+      <td>{{x.Class}}</td>
+      <td>{{x.Batch}}</td>
+      <td>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckDefault">
+            PRESENT
+          </label>
+        </div></td>
+        <td> <a href="#"><span class="btn btn-success">Send Message</span></a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  </form>
+  <div class="row">
+    <div class="col-sm-6">
+  <input type="submit" class="btn btn-outline-primary w-100"></input></div>
+  <div class="col-sm-6">
+  <input type="submit" class="btn btn-outline-primary w-100" value="BIOMETRICES"></input></div>
+</div>
+  {% endblock %}

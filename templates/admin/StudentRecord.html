@@ -1,0 +1,35 @@
+{% extends 'admin/dashboard.html' %}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center">STUDENT<b style="color:#4f0e0e;">&nbspRECORDS</b></div>  
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">MOBILENO</th>
+        <th scope="col">CLASS</th>
+        <th scope="col">BATCH</th>
+        <th scope="col">ACTIONS</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in sr %}
+      <tr>
+        <th scope="row">{{t.id}}</th>
+        <td>{{t.Name}}</td>
+        <td>{{t.MobileNo}}</td>
+        <td>{{t.Class}}</td>
+        <td>{{t.Batch}}</td>
+      
+        <td><a href="/edit/"><span class="btn btn-success">Edit</span></a>
+          <a href="/delete/{{t.id}}"><span class="btn btn-success">Delete</span></a>
+          
+        </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

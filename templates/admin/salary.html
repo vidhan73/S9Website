@@ -1,0 +1,38 @@
+{% extends 'admin/dashboard.html' %}
+{% load static %}
+{% block x %}
+
+
+<div class="fs-2 text-center">STAFF<b style="color:#4f0e0e;">&nbspSALARY</b></div>  </hr>
+<form>
+
+
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">SALARY</th>
+        <th scope="col">DATE</th>
+        <th scope="col">AMOUNT PAID</th>
+        <th scope="col">ACTION</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    {% for x in t %}
+      <tr>
+        <th scope="row">{{x.Name}}</th>
+        <td>{{x.Salary}}</td>
+        <td><input type="Date"></td>
+        <td><input type="text"></td>
+        <td><a href="#"><span class="btn btn-success">DEPOSITE</span></a>
+          <a href="#"><span class="btn btn-success">EDIT</span></a>
+          <a href="#"><span class="btn btn-success">Send Message</span></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary w-100">ALL DEPOSITED</button>
+</form>
+{% endblock %}

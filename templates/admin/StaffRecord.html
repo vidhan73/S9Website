@@ -1,0 +1,32 @@
+{% extends 'admin/dashboard.html' %}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center">STAFF<b style="color:#4f0e0e;">&nbspRECORDS</b></div>  </hr>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">MOBILENO</th>
+        <th scope="col">ADDRESS</th>
+        <th scope="col">SALARY</th>
+        <th scope="col">COURSES</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for x in t %}
+      <tr>
+        <th scope="row">{{x.Name}}</th>
+        <td>{{x.MobileNo}}</td>
+        <td>{{x.Address}}</td>
+        <td>{{x.Salary}}</td>
+        <td>{{x.Courses}}</td>
+        <td><a href="/edit/"><span class="btn btn-success">Edit</span></a>
+          <a href="/delete/{{t.id}}"><span class="btn btn-success">Delete</span></a>
+          
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
